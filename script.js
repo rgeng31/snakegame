@@ -677,7 +677,7 @@ function draw() {
                 baseColor = adjustColor(snakeColor, -20);
             }
 
-            if (isImmune) {
+            if (isInvincible) {
                 ctx.globalAlpha = flashAlpha;
                 ctx.fillStyle = baseColor;
             } else {
