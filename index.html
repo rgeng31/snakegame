@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #death-emoji {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20rem;
+            pointer-events: none;
+            z-index: 2000;
+            user-select: none;
+            text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="death-emoji" class="hidden">😂</div>
+    <div class="game-container">
+        <h1>Snake Game</h1>
+        <div class="score-board">
+            <span>Score: <span id="score">0</span></span>
+            <span>High Score: <span id="high-score">0</span></span>
+            <button id="reset-high-score" class="reset-btn">Reset</button>
+        </div>
+
+        <div class="color-palette">
+            <div class="color-option" style="background-color: #4CAF50;" data-color="#4CAF50" title="Green"></div>
+            <div class="color-option" style="background-color: #2196F3;" data-color="#2196F3" title="Blue"></div>
+            <div class="color-option" style="background-color: #F44336;" data-color="#F44336" title="Red"></div>
+            <div class="color-option" style="background-color: #9C27B0;" data-color="#9C27B0" title="Purple"></div>
+            <div class="color-option" style="background-color: #E91E63;" data-color="#E91E63" title="Pink"></div>
+            <div class="color-option" style="background-color: #FF9800;" data-color="#FF9800" title="Orange"></div>
+            <div class="color-option" style="background-color: #00BCD4;" data-color="#00BCD4" title="Cyan"></div>
+            <div class="color-option" style="background: linear-gradient(45deg, #f06, #9f6);" data-color="rainbow"
+                title="Rainbow"></div>
+        </div>
+
+        <div class="canvas-wrapper">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <div id="start-screen" class="overlay">
+                <h2>Press any key to start</h2>
+            </div>
+            <div id="game-over-screen" class="overlay hidden">
+                <h2>Game Over!</h2>
+                <p>Final Score: <span id="final-score">0</span></p>
+                <button id="restart-btn">Play Again</button>
+            </div>
+        </div>
+        <div class="controls-hint">
+            <p>Use <strong>Mouse</strong> to steer</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
