@@ -139,7 +139,7 @@ h1 {
 #restart-btn {
     padding: 15px 30px;
     font-size: 1.5rem;
-    background-color: #4CAF50;
+    background-color: #2196F3;
     color: white;
     border: none;
     border-radius: 8px;
@@ -149,7 +149,7 @@ h1 {
 }
 
 #restart-btn:hover {
-    background-color: #45a049;
+    background-color: #1E88E5;
     transform: scale(1.05);
 }
 
